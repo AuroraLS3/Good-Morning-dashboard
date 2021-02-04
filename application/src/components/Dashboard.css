@@ -1,0 +1,24 @@
+.dashboard {
+    height: 100vh;
+    background-color: var(--color-grey);
+}
+
+.edit-button {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    background-color: var(--color-dark);
+    display: block;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 5px black;
+    font-size: 1.5rem;
+    color: var(--color-light);
+}
+
+.edit-button:hover {
+    filter: brightness(1.1);
+    cursor: pointer;
+}

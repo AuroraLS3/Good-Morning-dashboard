@@ -1,0 +1,12 @@
+:root {
+    --color-darkest: #142850;
+    --color-darker: #27496d;
+    --color-dark: #0c7b93;
+    --color-light: #FBFFFE;
+    --color-grey: #dedede;
+    --color-accent: #fcd1d1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+}
