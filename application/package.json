@@ -1,5 +1,6 @@
 {
   "name": "application",
+  "homepage": "https://aurorals3.github.io/Good-Morning-dashboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
