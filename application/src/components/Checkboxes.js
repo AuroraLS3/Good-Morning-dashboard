@@ -34,7 +34,7 @@ class CheckboxContainer extends React.Component {
                         value={this.props.checkboxes.label}
                     ></input>
                 ) : (
-                    <label>{this.props.checkboxes.label}</label>
+                    <i className={this.props.checkboxes.label} onClick={this.props.resetCheckboxes}></i>
                 )}
                 <ul>
                     {this.props.checkboxes.checkboxes.map((checkbox, i) => {
@@ -91,6 +91,7 @@ class Checkboxes extends React.Component {
                             editMode={this.props.editMode}
                             checkboxes={checkboxContainer}
                             toggleCheckbox={this.props.toggleCheckbox(i)}
+                            resetCheckboxes={this.props.resetCheckboxes(i)}
                             removeCheckboxes={this.props.removeCheckboxes(i)}
                             addCheckbox={this.props.addCheckbox(i)}
                             removeCheckbox={this.props.removeCheckbox(i)}

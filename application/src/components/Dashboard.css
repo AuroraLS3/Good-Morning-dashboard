@@ -1,8 +1,3 @@
-.dashboard {
-    height: 100vh;
-    background-color: var(--color-grey);
-}
-
 .edit-button {
     position: fixed;
     right: 2rem;

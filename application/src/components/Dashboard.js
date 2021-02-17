@@ -10,7 +10,7 @@ class Dashboard extends React.Component {
             editMode: false,
             checkboxes: [
                 {
-                    label: "Example",
+                    label: "fa fa-fw fa-clock",
                     checkboxes: [
                         { checked: false },
                         { checked: true },
@@ -18,7 +18,7 @@ class Dashboard extends React.Component {
                     ],
                 },
                 {
-                    label: "Secondary longer title",
+                    label: "fa fa-fw fa-dumbbell",
                     checkboxes: [
                         { checked: false },
                         { checked: false },
@@ -39,6 +39,14 @@ class Dashboard extends React.Component {
             .checked;
         this.setState({ checkboxes: checkboxState });
     };
+
+    resetCheckboxes = (i) => () => {
+        const checkboxState = this.state.checkboxes;
+        checkboxState[i].checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+        this.setState({ checkboxes: checkboxState });
+    }
 
     addCheckboxes = () => {
         const checkboxState = this.state.checkboxes;
@@ -84,6 +92,7 @@ class Dashboard extends React.Component {
                     editMode={this.state.editMode}
                     checkboxes={this.state.checkboxes}
                     toggleCheckbox={this.toggleCheckbox}
+                    resetCheckboxes={this.resetCheckboxes}
                     addCheckboxes={this.addCheckboxes}
                     removeCheckboxes={this.removeCheckboxes}
                     addCheckbox={this.addCheckbox}

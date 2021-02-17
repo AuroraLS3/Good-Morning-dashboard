@@ -5,12 +5,8 @@
 }
 
 .checkbox-column > * {
-    margin-bottom: 1rem;
-}
-
-.checkbox-column label {
-    margin-right: -1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    padding-bottom: 1rem;
 }
 
 .checkbox-row {
@@ -18,23 +14,30 @@
     flex-direction: row;
 }
 
-.checkbox-row > * {
+.checkbox-row > ul {
     display: flex;
     flex-direction: row;
+    padding-left: 2rem;
 }
 
 .checkbox-row li::marker {
     display: none;
     color: transparent;
+    width: 0;
+    padding: 0;
 }
 
 .checkbox {
-    padding-top: 0.2rem;
+    margin-top: -0.5rem;
     padding-right: 1rem;
 }
 
 .checkbox input {
-    transform: scale(1.5);
+    transform: scale(2);
     height: 1.5rem;
     width: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
 }
