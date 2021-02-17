@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.5045b67c.chunk.css",
-    "main.js": "/static/js/main.6114f124.chunk.js",
-    "main.js.map": "/static/js/main.6114f124.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.fefa0a55.js",
-    "runtime-main.js.map": "/static/js/runtime-main.fefa0a55.js.map",
-    "static/css/2.5e2ab169.chunk.css": "/static/css/2.5e2ab169.chunk.css",
-    "static/js/2.a028a4ca.chunk.js": "/static/js/2.a028a4ca.chunk.js",
-    "static/js/2.a028a4ca.chunk.js.map": "/static/js/2.a028a4ca.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.5e2ab169.chunk.css.map": "/static/css/2.5e2ab169.chunk.css.map",
-    "static/css/main.5045b67c.chunk.css.map": "/static/css/main.5045b67c.chunk.css.map",
-    "static/js/2.a028a4ca.chunk.js.LICENSE.txt": "/static/js/2.a028a4ca.chunk.js.LICENSE.txt",
-    "static/media/all.css": "/static/media/fa-solid-900.f4f93856.woff"
+    "main.css": "/Good-Morning-dashboard/static/css/main.5045b67c.chunk.css",
+    "main.js": "/Good-Morning-dashboard/static/js/main.6114f124.chunk.js",
+    "main.js.map": "/Good-Morning-dashboard/static/js/main.6114f124.chunk.js.map",
+    "runtime-main.js": "/Good-Morning-dashboard/static/js/runtime-main.ba9e964d.js",
+    "runtime-main.js.map": "/Good-Morning-dashboard/static/js/runtime-main.ba9e964d.js.map",
+    "static/css/2.53d3fb1a.chunk.css": "/Good-Morning-dashboard/static/css/2.53d3fb1a.chunk.css",
+    "static/js/2.a028a4ca.chunk.js": "/Good-Morning-dashboard/static/js/2.a028a4ca.chunk.js",
+    "static/js/2.a028a4ca.chunk.js.map": "/Good-Morning-dashboard/static/js/2.a028a4ca.chunk.js.map",
+    "index.html": "/Good-Morning-dashboard/index.html",
+    "static/css/2.53d3fb1a.chunk.css.map": "/Good-Morning-dashboard/static/css/2.53d3fb1a.chunk.css.map",
+    "static/css/main.5045b67c.chunk.css.map": "/Good-Morning-dashboard/static/css/main.5045b67c.chunk.css.map",
+    "static/js/2.a028a4ca.chunk.js.LICENSE.txt": "/Good-Morning-dashboard/static/js/2.a028a4ca.chunk.js.LICENSE.txt",
+    "static/media/all.css": "/Good-Morning-dashboard/static/media/fa-solid-900.f4f93856.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.fefa0a55.js",
-    "static/css/2.5e2ab169.chunk.css",
+    "static/js/runtime-main.ba9e964d.js",
+    "static/css/2.53d3fb1a.chunk.css",
     "static/js/2.a028a4ca.chunk.js",
     "static/css/main.5045b67c.chunk.css",
     "static/js/main.6114f124.chunk.js"
