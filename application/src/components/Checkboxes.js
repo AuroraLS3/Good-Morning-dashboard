@@ -2,10 +2,6 @@ import "./Checkboxes.css";
 import React from "react";
 
 class Checkbox extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <li id={"checkbox-" + this.props.id} className="checkbox">
@@ -20,10 +16,6 @@ class Checkbox extends React.Component {
 }
 
 class CheckboxContainer extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <li id={"checkbox-row-" + this.props.id} className="checkbox-row">
@@ -77,10 +69,6 @@ class CheckboxContainer extends React.Component {
 }
 
 class Checkboxes extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <ul className="checkbox-column">
