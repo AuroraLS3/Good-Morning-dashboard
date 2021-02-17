@@ -1,18 +1,98 @@
-import './Dashboard.css';
-import React from 'react';
+import "./Dashboard.css";
+import React from "react";
+import EditButton from "./EditButton.js";
+import Checkboxes from "./Checkboxes.js";
 
 class Dashboard extends React.Component {
-
     constructor(props) {
         super(props);
+        this.state = {
+            editMode: false,
+            checkboxes: [
+                {
+                    label: "Example",
+                    checkboxes: [
+                        { checked: false },
+                        { checked: true },
+                        { checked: false },
+                    ],
+                },
+                {
+                    label: "Secondary longer title",
+                    checkboxes: [
+                        { checked: false },
+                        { checked: false },
+                        { checked: false },
+                    ],
+                },
+            ],
+        };
     }
+
+    toggleEditMode = () => {
+        this.setState({ editMode: !this.state.editMode });
+    };
+
+    toggleCheckbox = (i) => (j) => () => {
+        const checkboxState = this.state.checkboxes;
+        checkboxState[i].checkboxes[j].checked = !checkboxState[i].checkboxes[j]
+            .checked;
+        this.setState({ checkboxes: checkboxState });
+    };
+
+    addCheckboxes = () => {
+        const checkboxState = this.state.checkboxes;
+        checkboxState.push({
+            label: document.getElementById('task-name-field').value,
+            checkboxes: [{ checked: false }],
+        });
+        document.getElementById('task-name-field').value = "";
+        this.setState({ checkboxes: checkboxState });
+    };
+
+    removeCheckboxes = (i) => () => {
+        const checkboxState = this.state.checkboxes;
+        checkboxState.splice(i, 1);
+        this.setState({ checkboxes: checkboxState });
+    };
+
+    addCheckbox = (i) => () => {
+        const checkboxState = this.state.checkboxes;
+        checkboxState[i].checkboxes.push({ checked: false });
+        this.setState({ checkboxes: checkboxState });
+    };
+
+    removeCheckbox = (i) => () => {
+        const checkboxState = this.state.checkboxes;
+        checkboxState[i].checkboxes.splice(
+            checkboxState[i].checkboxes.length - 1,
+            1
+        );
+        this.setState({ checkboxes: checkboxState });
+    };
+
+    changeLabel = (i) => (event) => {
+        const checkboxState = this.state.checkboxes;
+        checkboxState[i].label = event.target.value;
+        this.setState({ checkboxes: checkboxState });
+    } 
 
     render() {
         return (
             <section className="dashboard">
-                {this.props.children}
+                <Checkboxes
+                    editMode={this.state.editMode}
+                    checkboxes={this.state.checkboxes}
+                    toggleCheckbox={this.toggleCheckbox}
+                    addCheckboxes={this.addCheckboxes}
+                    removeCheckboxes={this.removeCheckboxes}
+                    addCheckbox={this.addCheckbox}
+                    removeCheckbox={this.removeCheckbox}
+                    changeLabel={this.changeLabel}
+                />
+                <EditButton onClick={this.toggleEditMode} />
             </section>
-        )
+        );
     }
 }
 

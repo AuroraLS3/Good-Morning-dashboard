@@ -1,0 +1,40 @@
+.checkbox-column {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+
+.checkbox-column > * {
+    margin-bottom: 1rem;
+}
+
+.checkbox-column label {
+    margin-right: -1rem;
+    font-size: 1.5rem;
+}
+
+.checkbox-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox-row > * {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox-row li::marker {
+    display: none;
+    color: transparent;
+}
+
+.checkbox {
+    padding-top: 0.2rem;
+    padding-right: 1rem;
+}
+
+.checkbox input {
+    transform: scale(1.5);
+    height: 1.5rem;
+    width: 1.5rem;
+}
