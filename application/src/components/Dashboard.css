@@ -1,7 +1,4 @@
-.edit-button {
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
+.edit-button, .fullscreen-button {
     background-color: var(--color-dark);
     display: block;
     height: 5rem;
@@ -13,7 +10,19 @@
     color: var(--color-light);
 }
 
-.edit-button:hover {
+.edit-button {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.fullscreen-button {
+    position: fixed;
+    right: 8rem;
+    bottom: 2rem;
+}
+
+.edit-button:hover, .fullscreen-button:hover {
     filter: brightness(1.1);
     cursor: pointer;
 }

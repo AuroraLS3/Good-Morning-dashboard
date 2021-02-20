@@ -1,6 +1,7 @@
 import "./Dashboard.css";
 import React from "react";
 import EditButton from "./EditButton.js";
+import FullscreenButton from "./FullscreenButton.js";
 import Checkboxes from "./Checkboxes.js";
 import Storage from "../localStorage.js";
 
@@ -111,6 +112,7 @@ class Dashboard extends React.Component {
                     removeCheckbox={this.removeCheckbox}
                     changeLabel={this.changeLabel}
                 />
+                <FullscreenButton />
                 <EditButton onClick={this.toggleEditMode} />
             </section>
         );
