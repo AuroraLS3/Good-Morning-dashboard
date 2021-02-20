@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Good-Morning-dashboard/static/css/main.5045b67c.chunk.css",
-    "main.js": "/Good-Morning-dashboard/static/js/main.6114f124.chunk.js",
-    "main.js.map": "/Good-Morning-dashboard/static/js/main.6114f124.chunk.js.map",
+    "main.js": "/Good-Morning-dashboard/static/js/main.e8c6fce5.chunk.js",
+    "main.js.map": "/Good-Morning-dashboard/static/js/main.e8c6fce5.chunk.js.map",
     "runtime-main.js": "/Good-Morning-dashboard/static/js/runtime-main.ba9e964d.js",
     "runtime-main.js.map": "/Good-Morning-dashboard/static/js/runtime-main.ba9e964d.js.map",
     "static/css/2.53d3fb1a.chunk.css": "/Good-Morning-dashboard/static/css/2.53d3fb1a.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.53d3fb1a.chunk.css",
     "static/js/2.a028a4ca.chunk.js",
     "static/css/main.5045b67c.chunk.css",
-    "static/js/main.6114f124.chunk.js"
+    "static/js/main.e8c6fce5.chunk.js"
   ]
 }
