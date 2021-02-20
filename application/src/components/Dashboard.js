@@ -2,10 +2,14 @@ import "./Dashboard.css";
 import React from "react";
 import EditButton from "./EditButton.js";
 import Checkboxes from "./Checkboxes.js";
+import Storage from "../localStorage.js";
 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
+
+        this.storage = new Storage();
+
         this.state = {
             editMode: false,
             checkboxes: [
@@ -29,8 +33,14 @@ class Dashboard extends React.Component {
         };
     }
 
+    componentDidMount = () => {
+        const loadedCheckboxes = this.storage.loadCheckboxes();
+        if (loadedCheckboxes) this.setState({ checkboxes: loadedCheckboxes });
+    };
+
     toggleEditMode = () => {
         this.setState({ editMode: !this.state.editMode });
+        this.storage.storeCheckboxes(this.state.checkboxes);
     };
 
     toggleCheckbox = (i) => (j) => () => {
@@ -38,23 +48,25 @@ class Dashboard extends React.Component {
         checkboxState[i].checkboxes[j].checked = !checkboxState[i].checkboxes[j]
             .checked;
         this.setState({ checkboxes: checkboxState });
+        this.storage.storeCheckboxes(checkboxState);
     };
 
     resetCheckboxes = (i) => () => {
         const checkboxState = this.state.checkboxes;
-        checkboxState[i].checkboxes.forEach(checkbox => {
+        checkboxState[i].checkboxes.forEach((checkbox) => {
             checkbox.checked = false;
         });
         this.setState({ checkboxes: checkboxState });
-    }
+        this.storage.storeCheckboxes(checkboxState);
+    };
 
     addCheckboxes = () => {
         const checkboxState = this.state.checkboxes;
         checkboxState.push({
-            label: document.getElementById('task-name-field').value,
+            label: document.getElementById("task-name-field").value,
             checkboxes: [{ checked: false }],
         });
-        document.getElementById('task-name-field').value = "";
+        document.getElementById("task-name-field").value = "";
         this.setState({ checkboxes: checkboxState });
     };
 
@@ -83,7 +95,7 @@ class Dashboard extends React.Component {
         const checkboxState = this.state.checkboxes;
         checkboxState[i].label = event.target.value;
         this.setState({ checkboxes: checkboxState });
-    } 
+    };
 
     render() {
         return (
