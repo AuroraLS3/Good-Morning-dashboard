@@ -41,3 +41,27 @@
 ul {
     list-style-type: none;
 }
+
+small {
+    font-style: italic;
+    font-size: 1rem;
+    color: #888;
+}
+
+/* Edit mode */
+
+button {
+    background-color: transparent;
+    border: 2px solid green;
+    border-radius: 4px;
+    padding: 0.5rem 0.7rem;
+}
+
+button:hover {
+    background-color: rgba(0,0,0, 0.1);
+    cursor: pointer;
+}
+
+input {
+    padding: 0.5rem 0.7rem;
+}

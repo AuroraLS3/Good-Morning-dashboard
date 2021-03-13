@@ -17,6 +17,11 @@ class Checkbox extends React.Component {
 
 class CheckboxContainer extends React.Component {
     render() {
+        let label = this.props.checkboxes.label;
+        if (!label.includes('fa-fw')) label += ' fa-fw';
+
+        const lastCheckTime = this.props.checkboxes.lastChecked ? `${this.props.checkboxes.lastChecked}` : 'never';
+        
         return (
             <li id={"checkbox-row-" + this.props.id} className="checkbox-row">
                 {this.props.editMode ? (
@@ -26,7 +31,7 @@ class CheckboxContainer extends React.Component {
                         value={this.props.checkboxes.label}
                     ></input>
                 ) : (
-                    <i className={this.props.checkboxes.label} onClick={this.props.resetCheckboxes}></i>
+                    <i className={label} onClick={this.props.resetCheckboxes}></i>
                 )}
                 <ul>
                     {this.props.checkboxes.checkboxes.map((checkbox, i) => {
@@ -39,6 +44,7 @@ class CheckboxContainer extends React.Component {
                         );
                     })}
                 </ul>
+                <small>{lastCheckTime}</small>
                 {this.props.editMode ? (
                     <>
                         <button
@@ -88,7 +94,7 @@ class Checkboxes extends React.Component {
                     );
                 })}
                 {this.props.editMode ? (
-                    <>
+                    <div className="row">
                         <input
                             id="task-name-field"
                             type="text"
@@ -99,7 +105,7 @@ class Checkboxes extends React.Component {
                         >
                             Add new task
                         </button>
-                    </>
+                    </div>
                 ) : (
                     ""
                 )}

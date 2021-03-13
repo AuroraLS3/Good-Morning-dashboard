@@ -16,6 +16,7 @@ class Dashboard extends React.Component {
             checkboxes: [
                 {
                     label: "fa fa-fw fa-clock",
+                    lastChecked: undefined,
                     checkboxes: [
                         { checked: false },
                         { checked: true },
@@ -24,6 +25,7 @@ class Dashboard extends React.Component {
                 },
                 {
                     label: "fa fa-fw fa-dumbbell",
+                    lastChecked: undefined,
                     checkboxes: [
                         { checked: false },
                         { checked: false },
@@ -45,21 +47,40 @@ class Dashboard extends React.Component {
     };
 
     toggleCheckbox = (i) => (j) => () => {
+        const time = new Date();
         const checkboxState = this.state.checkboxes;
         checkboxState[i].checkboxes[j].checked = !checkboxState[i].checkboxes[j]
             .checked;
+        checkboxState[i].lastChecked = this.formatTime(time);
         this.setState({ checkboxes: checkboxState });
         this.storage.storeCheckboxes(checkboxState);
     };
 
     resetCheckboxes = (i) => () => {
+        const time = new Date();
         const checkboxState = this.state.checkboxes;
         checkboxState[i].checkboxes.forEach((checkbox) => {
             checkbox.checked = false;
         });
+        checkboxState[i].lastChecked = this.formatTime(time);
         this.setState({ checkboxes: checkboxState });
         this.storage.storeCheckboxes(checkboxState);
     };
+
+    formatTime = (time) => {
+        return `${time.getDate()}.${time.getMonth()+1}.${time.getFullYear()} ${time.getHours() + 1}:${time.getMinutes()}`;
+    };
+
+    getSuffix = (number) => {
+        if (number === 11 || number === 12 || number === 13) return 'th';
+        switch (number % 10) {
+            case 1: return 'st';
+            case 2: return 'nd';
+            case 3: return 'rd';
+            default:
+                return 'th';
+        }
+    }
 
     addCheckboxes = () => {
         const checkboxState = this.state.checkboxes;
