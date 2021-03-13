@@ -21,7 +21,7 @@ class CheckboxContainer extends React.Component {
         if (!label.includes('fa-fw')) label += ' fa-fw';
 
         const lastCheckTime = this.props.checkboxes.lastChecked ? `${this.props.checkboxes.lastChecked}` : 'never';
-        
+
         return (
             <li id={"checkbox-row-" + this.props.id} className="checkbox-row">
                 {this.props.editMode ? (
@@ -44,7 +44,7 @@ class CheckboxContainer extends React.Component {
                         );
                     })}
                 </ul>
-                <small>{lastCheckTime}</small>
+                
                 {this.props.editMode ? (
                     <>
                         <button
@@ -67,7 +67,7 @@ class CheckboxContainer extends React.Component {
                         </button>
                     </>
                 ) : (
-                    ""
+                    <small>{lastCheckTime}</small>
                 )}
             </li>
         );
