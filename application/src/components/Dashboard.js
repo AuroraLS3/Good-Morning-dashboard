@@ -68,7 +68,7 @@ class Dashboard extends React.Component {
     };
 
     formatTime = (time) => {
-        return `${time.getDate()}.${time.getMonth()+1}.${time.getFullYear()} ${time.getHours() + 1}:${time.getMinutes()}`;
+        return `${time.getDate()}.${time.getMonth()+1}.${time.getFullYear()} ${time.getHours()}:${time.getMinutes()}`;
     };
 
     getSuffix = (number) => {
